@@ -8,7 +8,9 @@ const SingleCard = ({ book }) => {
 
   console.log(book);
 
-  const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+  // const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+
+  const { bookName, author, image, rating, category, tags } = book;
 
   return (
     <div className="border rounded-xl">
@@ -28,7 +30,7 @@ const SingleCard = ({ book }) => {
           </p>
           <div className="h-16 w-full space-y-2 mt-4">
             <h2 className="text-xl font-semibold text-start">{bookName}</h2>
-            <p className="text-base">By : {author}</p>
+            <p className="text-base">By : <span className='font-semibold'> {author}</span></p>
           </div>
 
           <div className="divider"></div>
