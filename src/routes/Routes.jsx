@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayouts from "../layouts/MainLayouts";
 import Home from "../pages/Home";
 import ErrorPage from "../components/ErrorPage";
+import ListedBook from "../pages/ListedBook";
+import PagesToRead from '../pages/PagesToRead';
 
 export const router = createBrowserRouter([
     {
@@ -12,6 +14,14 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />
+            },
+            {
+                path: '/listedbook',
+                element:<ListedBook/>,
+            },
+            {
+                path: '/pagestoread',
+                element: <PagesToRead/>
             }
         ],
     },
