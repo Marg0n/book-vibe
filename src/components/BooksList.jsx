@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 const BooksList = ({books}) => {
 
-  console.log(books);
-
+  
   return (
     <div className="my-8 container mx-auto">
       <h1
