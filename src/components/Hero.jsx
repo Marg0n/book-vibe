@@ -13,7 +13,7 @@ const Hero = () => {
           <h1 className="text-5xl font-bold">
             Books to freshen up your bookshelf
           </h1>
-          <Link to='/listedbook' className="btn btn-primary">Get Started</Link>
+          <Link to='/listedbook' className="btn bg-green-500 text-white hover:btn-accent">View The List</Link>
         </div>
       </div>
     </div>
