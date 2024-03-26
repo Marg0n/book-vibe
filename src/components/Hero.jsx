@@ -1,18 +1,23 @@
-
+import { Link } from "react-router-dom";
+import book from "../assets/images/book1.png"
 
 const Hero = () => {
-    return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
-                <div>
-                    <h1 className="text-5xl font-bold">Box Office News!</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button className="btn btn-primary">Get Started</button>
-                </div>
-            </div>
+  return (
+    <div className="hero min-h-96 bg-base-200 container mx-auto rounded-xl py-12 lg:px-28">
+      <div className="hero-content flex-col lg:flex-row-reverse gap-14">
+        <img
+          src={book}
+          className="max-w-sm rounded-lg shadow-2xl"
+        />
+        <div className="space-y-8 px-6">
+          <h1 className="text-5xl font-bold">
+            Books to freshen up your bookshelf
+          </h1>
+          <Link to='/listedbook' className="btn btn-primary">Get Started</Link>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Hero;
