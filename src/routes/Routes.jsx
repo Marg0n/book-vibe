@@ -24,12 +24,12 @@ export const router = createBrowserRouter([
             {
                 path: '/pagestoread',
                 element: <PagesToRead/>
-            }
+            },    
+            {
+                path: '/book/:id',
+                element: <BookDetails/>,
+                loader: ()=> fetch('../../public/book_list.json'),
+            },
         ],
-    },    
-    {
-        path: '/book/:id',
-        element: <BookDetails/>,
-        loader: ()=> fetch('../../public/book_list.json'),
-    }
+    },
 ]);

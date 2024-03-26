@@ -2,18 +2,21 @@
 import { PropTypes } from 'prop-types';
 import Tag from './Tag';
 import { CiStar } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 
 const SingleCard = ({ book }) => {
 
-  console.log(book);
+  // console.log(book);
 
   // const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
 
-  const { bookName, author, image, rating, category, tags } = book;
+  const { bookId, bookName, author, image, rating, category, tags } = book;
 
   return (
-    <div className="border rounded-xl">
+    <Link
+    to={`/book/${bookId}`} 
+    className="border rounded-xl">
       <div className="card shadow-xl min-h-[80vh]">
         <figure className="mx-8 mt-8 p-8 rounded-xl bg-gray-200">
           <img
@@ -48,7 +51,7 @@ const SingleCard = ({ book }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
