@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import { getReadBooks } from '../utils/storage';
 
 const Chart = () => {
@@ -60,6 +60,8 @@ const Chart = () => {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
                     <YAxis />
+                    <Tooltip />
+                    <Legend />
                     <Bar dataKey="price" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
                         {data.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
