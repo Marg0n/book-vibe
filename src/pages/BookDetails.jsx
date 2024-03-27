@@ -1,29 +1,33 @@
 import { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Tag from '../components/Tag';
+import { saveReadBooks, saveWishlist } from '../utils/storage';
 
 const BookDetails = () => {
 
     const { id } = useParams();
-    console.log(id);
+    // console.log(id);
 
     const [bookDetails, setBookDetails] = useState({});
     const book = useLoaderData();
     // console.log(book);
 
-    const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetails;
+    const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetails;
 
     useEffect(() => {
         const singleBook = book.find(item => item.bookId == id);
-        console.log(singleBook);
+        // console.log(singleBook);
         setBookDetails(singleBook);
     }, []);
 
     const handleRead = e => {
-        console.log(e)
+        // console.log(e)
+        saveReadBooks(e);
+
     };
     const handleWishlist = e => {
-        console.log(e)
+        // console.log(e)
+        saveWishlist(e);
     };
 
     return (
@@ -123,16 +127,16 @@ const BookDetails = () => {
                         </div>
 
                         <div className='gap-6 flex pt-6'>
-                            <button 
-                            onClick={() => handleRead(bookDetails)}
-                            className="btn btn-ghost btn-outline border-base-300">
+                            <button
+                                onClick={() => handleRead(bookDetails)}
+                                className="btn btn-ghost btn-outline border-base-300">
                                 Read
-                                </button>
-                            <button 
-                            onClick={() => handleWishlist(bookDetails)}
-                            className="btn btn-accent hover:btn-info">
+                            </button>
+                            <button
+                                onClick={() => handleWishlist(bookDetails)}
+                                className="btn btn-accent hover:btn-info">
                                 Wishlist
-                                </button>
+                            </button>
                         </div>
                     </div>
                 </div>

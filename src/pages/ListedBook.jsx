@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";
+import { Link, Outlet } from "react-router-dom";
 
 
 
@@ -26,8 +26,9 @@ const ListedBook = () => {
                         {arrow === false ? <FaAngleDown size={16} /> : <IoIosArrowUp size={18} />}
                     </summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li><a>Rating</a></li>
+                        <li><a>Number of pages</a></li>
+                        <li><a>Published year</a></li>
                     </ul>
                 </details>
             </div>
@@ -47,7 +48,7 @@ const ListedBook = () => {
                     <span>Read Books</span>
                 </Link>
                 <Link
-                    to=''
+                    to='wishlist'
                     onClick={() => setTabIndex(1)}
                     className=
                     {`flex items-center flex-shrink-0 px-5 py-3 space-x-2 
@@ -61,8 +62,12 @@ const ListedBook = () => {
                     <span>Wishlist Books</span>
                 </Link>
 
+
             </div>
             {/* tabs end*/}
+            <div className="mt-6">
+                <Outlet />
+            </div>
 
         </div>
 

@@ -1,34 +1,49 @@
 import { createBrowserRouter } from "react-router-dom";
-import MainLayouts from "../layouts/MainLayouts";
-import Home from "../pages/Home";
 import ErrorPage from "../components/ErrorPage";
+import MainLayouts from "../layouts/MainLayouts";
+import BookDetails from "../pages/BookDetails";
+import Home from "../pages/Home";
 import ListedBook from "../pages/ListedBook";
 import PagesToRead from '../pages/PagesToRead';
-import BookDetails from "../pages/BookDetails";
+import ShowStoredBooks from "../components/ShowStoredBooks";
+import ShowWishlistBooks from "../components/ShowWishlistBooks";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayouts />,
-        errorElement: <ErrorPage/>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
                 element: <Home />,
-                loader: ()=> fetch('../../public/book_list.json'),
+                loader: () => fetch('../../public/book_list.json'),
             },
             {
                 path: '/listedbook',
-                element:<ListedBook/>,
+                element: <ListedBook />,
+                loader: () => fetch('../../public/book_list.json'),
+                children: [
+                    {
+                        index: true,
+                        element: <ShowStoredBooks />,
+                        loader: () => fetch('../../public/book_list.json'),
+                    },
+                    {
+                        path: 'wishlist',
+                        element: <ShowWishlistBooks />,
+                        loader: () => fetch('../../public/book_list.json'),
+                    }
+                ],
             },
             {
                 path: '/pagestoread',
-                element: <PagesToRead/>
-            },    
+                element: <PagesToRead />
+            },
             {
                 path: '/book/:id',
-                element: <BookDetails/>,
-                loader: ()=> fetch('../../public/book_list.json'),
+                element: <BookDetails />,
+                loader: () => fetch('../../public/book_list.json'),
             },
         ],
     },

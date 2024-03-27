@@ -40,7 +40,8 @@ export const saveReadBooks = (Item) => {
     let books = getReadBooks();
 
     //check if the blog already exists
-    const isExists = books.find(b => b.id === Item.bookId);
+    const isExists = books.find(b => b.bookId === Item.bookId);
+    console.log(isExists)
     
     if (isExists) {
         return toast.error('Already Read!');
@@ -59,7 +60,7 @@ export const saveWishlist = (Item) => {
     let books = getWishlist();
 
     //check if the blog already exists
-    const isExists = books.find(b => b.id === Item.bookId);
+    const isExists = books.find(b => b.bookId === Item.bookId);
     
     if (isExists) {
         return toast.error('Already in the Wishlist!');
