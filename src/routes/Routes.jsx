@@ -19,22 +19,22 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
-                loader: () => fetch('../../public/book_list.json'),
+                loader: () => fetch('./public/book_list.json'),
             },
             {
                 path: '/listedbook',
                 element: <ListedBook />,
-                loader: () => fetch('../../public/book_list.json'),
+                loader: () => fetch('./public/book_list.json'),
                 children: [
                     {
                         index: true,
                         element: <ShowStoredBooks />,
-                        loader: () => fetch('../../public/book_list.json'),
+                        loader: () => fetch('./public/book_list.json'),
                     },
                     {
                         path: 'wishlist',
                         element: <ShowWishlistBooks />,
-                        loader: () => fetch('../../public/book_list.json'),
+                        loader: () => fetch('./public/book_list.json'),
                     }
                 ],
             },
@@ -45,17 +45,17 @@ export const router = createBrowserRouter([
             {
                 path: '/book/:id',
                 element: <BookDetails />,
-                loader: () => fetch('../../public/book_list.json'),
+                loader: () => fetch('./public/book_list.json'),
             },
             {
                 path: '/wishtoread',
                 element: <WishlistChart />,
-                loader: () => fetch('../../public/book_list.json'),
+                loader: () => fetch('./public/book_list.json'),
             },
             {
                 path: '/interview',
                 element: <Interview />,
-                loader: () => fetch('../../public/interview.json'),
+                loader: () => fetch('./public/interview.json'),
             },
         ],
     },
