@@ -6,7 +6,7 @@ import { PropTypes } from 'prop-types';
 const Cards = ({ books }) => {
 
 
-  const { bookId } = books;
+  // const { bookId } = books;
 
   return (
     <Link 
@@ -14,8 +14,8 @@ const Cards = ({ books }) => {
     className="grid md:grid-cols-3 gap-8"
     >
       {
-        books.map((book) => (
-          <SingleCard key={bookId} book={book} />
+        books.map((book,idx) => (
+          <SingleCard key={idx} book={book} />
         ))
       }
 

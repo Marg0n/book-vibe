@@ -71,8 +71,8 @@ const Nav = () => {
       </div>
 
       <div className="navbar-end gap-4 items-center">
-        <a className="btn bg-green-500">Sign In</a>
-        <a className="btn btn-accent">Sign Up</a>
+        <Link to='' className="btn bg-green-500">Sign In</Link>
+        <Link to='' className="btn btn-accent">Sign Up</Link>
       </div>
     </div>
   );

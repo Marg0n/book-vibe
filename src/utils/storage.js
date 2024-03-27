@@ -8,7 +8,7 @@ export const getReadBooks = () => {
     //try to get data from local storage
     const storedBooks = localStorage.getItem('readBook');
 
-    if (storedBooks){
+    if (storedBooks) {
         readBook = JSON.parse(storedBooks);
     }
 
@@ -19,12 +19,12 @@ export const getReadBooks = () => {
 
 export const getWishlist = () => {
 
-    
+
     let wishlistBook = [];
     //try to get data from local storage
     const wishlistBooks = localStorage.getItem('wishlistBook');
 
-    if (wishlistBooks){
+    if (wishlistBooks) {
         wishlistBook = JSON.parse(wishlistBooks);
     }
 
@@ -42,15 +42,16 @@ export const saveReadBooks = (Item) => {
     //check if the blog already exists
     const isExists = books.find(b => b.bookId === Item.bookId);
     console.log(isExists)
-    
+
+
     if (isExists) {
-        return toast.error('Already Read!');
+        return toast.error('Reading finished!');
     }
     books.push(Item);
 
     //setting in localStorage
     localStorage.setItem('readBook', JSON.stringify(books));
-    toast.success('Successfully added!');
+    toast.success('Successfully finished reading!');
 }
 
 //wishlist save toast
@@ -58,18 +59,26 @@ export const saveReadBooks = (Item) => {
 export const saveWishlist = (Item) => {
 
     let books = getWishlist();
+    let read = getReadBooks();
 
     //check if the blog already exists
     const isExists = books.find(b => b.bookId === Item.bookId);
-    
-    if (isExists) {
+
+
+    const isReadExists = read.find(b => b.bookId === Item.bookId);
+
+
+    if (isReadExists) {
+        return toast.error('Already finished Reading!');
+    }
+    else if (isExists) {
         return toast.error('Already in the Wishlist!');
     }
     books.push(Item);
 
     //setting in localStorage
     localStorage.setItem('wishlistBook', JSON.stringify(books));
-    toast.success('Successfully added!');
+    toast.success('Successfully added to the Wishlist!');
 }
 
 //----------------------------------------------------------------
@@ -81,7 +90,7 @@ export const deleteReadBooks = (id) => {
     let books = getReadBooks();
 
     //creating a new var in which the blog in question is not present
-    const remainingBooks = books.filter( b => b.id !== id);
+    const remainingBooks = books.filter(b => b.id !== id);
 
     //setting in localStorage
     localStorage.setItem('readBook', JSON.stringify(remainingBooks));
@@ -93,7 +102,7 @@ export const deleteWishlist = (id) => {
     let books = getWishlist();
 
     //creating a new var in which the blog in question is not present
-    const remainingBooks = books.filter( b => b.id !== id);
+    const remainingBooks = books.filter(b => b.id !== id);
 
     //setting in localStorage
     localStorage.setItem('wishlistBook', JSON.stringify(remainingBooks));

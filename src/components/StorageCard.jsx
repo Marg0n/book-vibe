@@ -1,5 +1,4 @@
 import { PropTypes } from 'prop-types';
-import React from 'react';
 import { CiLocationOn } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import Tag from './Tag';
@@ -7,7 +6,11 @@ import Tag from './Tag';
 
 const StorageCard = ({ book }) => {
 
-    const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+    const { bookId, bookName, author, image, 
+        // review, totalPages, 
+        rating, category, tags, 
+        // publisher, 
+        yearOfPublishing } = book;
 
     return (
         <Link

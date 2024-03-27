@@ -26,9 +26,9 @@ const ListedBook = () => {
                         {arrow === false ? <FaAngleDown size={16} /> : <IoIosArrowUp size={18} />}
                     </summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li><a>Rating</a></li>
-                        <li><a>Number of pages</a></li>
-                        <li><a>Published year</a></li>
+                        <li>Rating</li>
+                        <li>Number of pages</li>
+                        <li>Published year</li>
                     </ul>
                 </details>
             </div>

@@ -56,7 +56,7 @@ const SingleCard = ({ book }) => {
 };
 
 SingleCard.propTypes = {
-  book: PropTypes.array,
+  book: PropTypes.object,
 }
 
 export default SingleCard;
