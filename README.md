@@ -2,7 +2,7 @@
 
 Live site:
 
-- [Live Site]()
+- [Live Site](https://smd-bookvibe.netlify.app/)
 
 Resources:
 
