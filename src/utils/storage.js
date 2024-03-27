@@ -22,10 +22,10 @@ export const getWishlist = () => {
 
     let wishlistBook = [];
     //try to get data from local storage
-    const wishlistBooks = localStorage.getItem('wishlistBook');
+    const wishlist = localStorage.getItem('wishlistBook');
 
-    if (wishlistBooks) {
-        wishlistBook = JSON.parse(wishlistBooks);
+    if (wishlist) {
+        wishlistBook = JSON.parse(wishlist);
     }
 
     return wishlistBook;
@@ -41,7 +41,7 @@ export const saveReadBooks = (Item) => {
 
     //check if the blog already exists
     const isExists = books.find(b => b.bookId === Item.bookId);
-    console.log(isExists)
+    // console.log(isExists)
 
 
     if (isExists) {

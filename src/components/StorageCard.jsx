@@ -6,9 +6,9 @@ import Tag from './Tag';
 
 const StorageCard = ({ book }) => {
 
-    const { bookId, bookName, author, image, 
+    const { bookId, bookName, author, image,
         // review, totalPages, 
-        rating, category, tags, 
+        rating, category, tags,
         // publisher, 
         yearOfPublishing } = book;
 

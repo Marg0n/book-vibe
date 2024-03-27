@@ -10,7 +10,7 @@ const BookDetails = () => {
 
     const [bookDetails, setBookDetails] = useState({});
     const book = useLoaderData();
-    // console.log(book);
+    console.log(book);
 
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetails;
 
@@ -18,7 +18,7 @@ const BookDetails = () => {
         const singleBook = book.find(item => item.bookId == id);
         // console.log(singleBook);
         setBookDetails(singleBook);
-    }, []);
+    }, [book, id]);
 
     const handleRead = (details) => {
         // console.log(bookDetails)

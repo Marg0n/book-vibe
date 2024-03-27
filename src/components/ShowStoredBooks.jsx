@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+// import { Link, useLoaderData } from 'react-router-dom';
 import { getReadBooks } from '../utils/storage';
 import StorageCard from './StorageCard';
 
 const ShowStoredBooks = () => {
 
     const [bookDetails, setBookDetails] = useState([]);
-    const book = useLoaderData();
+    // const book = useLoaderData();
     // console.log(book);
 
-    const { bookId } = book;
+    // const { bookId } = book;
 
     useEffect(() => {
 
@@ -17,8 +17,8 @@ const ShowStoredBooks = () => {
     }, [])
 
     return (
-        <Link
-            to={`/book/${bookId}`}
+        <div
+            // to={`/book/${bookId}`}
             className="grid md:grid-cols-1 gap-8"
         >
             {
@@ -27,7 +27,7 @@ const ShowStoredBooks = () => {
                 ))
             }
 
-        </Link>
+        </div>
     );
 };
 

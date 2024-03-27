@@ -38,7 +38,7 @@ const Nav = () => {
               Wishlist Chart
             </Link>
             <Link to="/interview" className="hover:bg-base-300">
-            Author Interviews
+              Author Interviews
             </Link>
           </ul>
         </div>
@@ -93,8 +93,8 @@ const Nav = () => {
       </div>
 
       <div className="navbar-end gap-4 items-center">
-        <Link to='' className="btn bg-green-500">Sign In</Link>
-        <Link to='' className="btn btn-accent">Sign Up</Link>
+        <div className="btn bg-green-500">Sign In</div>
+        <div className="btn btn-accent">Sign Up</div>
       </div>
     </div>
   );
