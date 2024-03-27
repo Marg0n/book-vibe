@@ -19,6 +19,13 @@ const BookDetails = () => {
         setBookDetails(singleBook);
     }, []);
 
+    const handleRead = e => {
+        console.log(e)
+    };
+    const handleWishlist = e => {
+        console.log(e)
+    };
+
     return (
         <section className="container mx-auto">
             <div className="space-y-6 sm:space-y-12">
@@ -116,8 +123,16 @@ const BookDetails = () => {
                         </div>
 
                         <div className='gap-6 flex pt-6'>
-                            <button className="btn btn-ghost btn-outline border-base-300">Read</button>
-                            <button className="btn btn-accent hover:btn-info">Wishlist</button>
+                            <button 
+                            onClick={() => handleRead(bookDetails)}
+                            className="btn btn-ghost btn-outline border-base-300">
+                                Read
+                                </button>
+                            <button 
+                            onClick={() => handleWishlist(bookDetails)}
+                            className="btn btn-accent hover:btn-info">
+                                Wishlist
+                                </button>
                         </div>
                     </div>
                 </div>

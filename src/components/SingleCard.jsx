@@ -26,7 +26,7 @@ const SingleCard = ({ book }) => {
           />
         </figure>
         <div className="card-body items-center text-start ">
-          <p className='w-full text-green-600 '>
+          <p className='w-full  '>
             {
               tags.map((tag, idx) => <Tag key={idx} tag={tag} />)
             }
