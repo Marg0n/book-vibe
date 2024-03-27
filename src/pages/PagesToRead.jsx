@@ -1,9 +1,10 @@
+import Chart from "../components/Chart";
 
 
 const PagesToRead = () => {
     return (
-        <div>
-            Graph
+        <div className="container mx-auto">
+            <Chart />
         </div>
     );
 };
