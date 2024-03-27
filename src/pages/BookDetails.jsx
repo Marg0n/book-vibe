@@ -20,14 +20,14 @@ const BookDetails = () => {
         setBookDetails(singleBook);
     }, []);
 
-    const handleRead = e => {
-        // console.log(e)
-        saveReadBooks(e);
+    const handleRead = (details) => {
+        // console.log(bookDetails)
+        saveReadBooks(details);
 
     };
-    const handleWishlist = e => {
-        // console.log(e)
-        saveWishlist(e);
+    const handleWishlist = (details) => {
+        // console.log(bookDetails)
+        saveWishlist(details);
     };
 
     return (
