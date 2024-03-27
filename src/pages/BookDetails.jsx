@@ -23,7 +23,7 @@ const BookDetails = () => {
         <section className="container mx-auto">
             <div className="space-y-6 sm:space-y-12">
                 <div
-                    className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
+                    className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 mb-16">
 
                     <div className="object-cover w-full min-h-64 rounded sm:min-h-[calc(100vh-114px)] lg:col-span-5 dark:bg-base-300 flex justify-center items-center">
                         <img
@@ -115,8 +115,9 @@ const BookDetails = () => {
                             </table>
                         </div>
 
-                        <div>
-                            button
+                        <div className='gap-6 flex pt-6'>
+                            <button className="btn btn-ghost btn-outline border-base-300">Read</button>
+                            <button className="btn btn-accent hover:btn-info">Wishlist</button>
                         </div>
                     </div>
                 </div>
