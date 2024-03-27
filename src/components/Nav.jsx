@@ -37,6 +37,9 @@ const Nav = () => {
             <Link to="/wishtoread" className="hover:bg-base-300">
               Wishlist Chart
             </Link>
+            <Link to="/interview" className="hover:bg-base-300">
+            Author Interviews
+            </Link>
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
@@ -77,6 +80,14 @@ const Nav = () => {
             }
           >
             Wishlist Chart
+          </NavLink>
+          <NavLink
+            to="/interview"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 border p-2 border-green-500 rounded-lg font-bold" : "font-bold"
+            }
+          >
+            Author Interviews
           </NavLink>
         </ul>
       </div>

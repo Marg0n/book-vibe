@@ -1,4 +1,4 @@
-import React from 'react';
+
 import WishlistChartShow from '../components/WishlistChartShow';
 
 const WishlistChart = () => {

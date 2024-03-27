@@ -2,46 +2,55 @@
   {
     "id": 1,
     "author": "F. Scott Fitzgerald",
+    "bookName": "The Great Gatsby",
     "interview": "In a rare interview, F. Scott Fitzgerald discusses his writing process and the inspiration behind his timeless classic, The Great Gatsby. He reflects on the decadence and disillusionment of the Roaring Twenties, offering insights into the characters and themes that have captivated readers for generations. Fitzgerald's candid reflections shed light on the enduring relevance of his work and its impact on American literature."
   },
   {
     "id": 2,
     "author": "Harper Lee",
+    "bookName": "To Kill a Mockingbird",
     "interview": "Harper Lee shares her thoughts on the enduring legacy of To Kill a Mockingbird and its exploration of racial injustice in the American South. In this intimate interview, Lee reflects on the inspiration behind her iconic characters, including the noble Atticus Finch and the courageous Scout. She discusses the challenges of writing a novel that continues to resonate with readers around the world, offering valuable insights into the power of storytelling to provoke empathy and spark social change."
   },
   {
     "id": 3,
     "author": "George Orwell",
+    "bookName": "1984",
     "interview": "George Orwell discusses the dystopian themes of his novel 1984 and their relevance in contemporary society. In this thought-provoking interview, Orwell reflects on the dangers of totalitarianism and the erosion of individual freedoms. He shares his concerns about the surveillance state and the manipulation of truth, offering a chilling vision of a future where freedom of thought is under threat. Orwell's prescient insights continue to resonate with readers today, reminding us of the importance of vigilance in defending our liberties."
   },
   {
     "id": 4,
     "author": "J.D. Salinger",
+    "bookName": "The Catcher in the Rye",
     "interview": "In a rare interview, J.D. Salinger opens up about his iconic novel The Catcher in the Rye and its enduring impact on readers. Salinger reflects on the character of Holden Caulfield and his journey of self-discovery, offering insights into the teenage experience and the search for authenticity. He discusses the challenges of fame and the pressures of literary success, providing a glimpse into the reclusive author's inner world. Salinger's candid reflections shed light on the complexities of adolescence and the universal quest for meaning."
   },
   {
     "id": 5,
     "author": "Jane Austen",
+    "bookName": "Pride and Prejudice",
     "interview": "Jane Austen reflects on the enduring popularity of Pride and Prejudice and its timeless themes of love, class, and societal expectations. In this insightful interview, Austen discusses her approach to crafting memorable characters and witty dialogue, offering a behind-the-scenes look at the creation of one of literature's most beloved novels. She reflects on the challenges faced by women writers in the early 19th century and the importance of female empowerment in her work. Austen's keen observations and sharp wit continue to enchant readers today, reminding us of the enduring power of her storytelling."
   },
   {
     "id": 6,
     "author": "J.R.R. Tolkien",
+    "bookName": "The Hobbit",
     "interview": "J.R.R. Tolkien discusses the creation of his enchanting world in The Hobbit and The Lord of the Rings trilogy. In this captivating interview, Tolkien delves into the mythology and languages that form the rich tapestry of Middle-earth, offering insights into his creative process and the inspiration behind his epic tales. He reflects on the themes of friendship, heroism, and the battle between good and evil that resonate throughout his works. Tolkien's imaginative vision continues to captivate readers of all ages, inviting them to embark on a timeless journey through his fantastical realm."
   },
   {
     "id": 7,
     "author": "Suzanne Collins",
+    "bookName": "The Hunger Games",
     "interview": "Suzanne Collins shares her thoughts on the dystopian world of The Hunger Games trilogy and its exploration of power, survival, and rebellion. In this compelling interview, Collins reflects on the inspiration behind her groundbreaking series, including her observations of war, media, and reality television. She discusses the development of her resilient heroine, Katniss Everdeen, and the themes of sacrifice and hope that drive the story forward. Collins' gripping narrative and thought-provoking themes continue to resonate with readers, sparking discussions about justice, inequality, and the resilience of the human spirit."
   },
   {
     "id": 8,
     "author": "Dan Brown",
+    "bookName": "The Da Vinci Code",
     "interview": "Dan Brown offers insights into the mysteries and secrets behind his bestselling novel The Da Vinci Code. In this intriguing interview, Brown discusses the research and historical references that inform his thrilling narrative, as well as the controversy and debate sparked by its exploration of religious symbolism. He shares his thoughts on the enduring fascination with conspiracy theories and the blurred lines between fact and fiction in his work. Brown's gripping storytelling and intricate plots continue to captivate readers, inviting them to unravel the enigmas hidden within his pages."
   },
   {
     "id": 9,
     "author": "J.K. Rowling",
+    "bookName": "Harry Potter and the Philosopher's Stone",
     "interview": "J.K. Rowling reflects on the magical world of Harry Potter and the Philosopher's Stone and its impact on readers worldwide. In this enchanting interview, Rowling delves into the origins of her beloved characters and the themes of friendship, courage, and the battle against darkness that define her iconic series. She discusses the challenges of writing for a diverse audience and the joy of seeing her stories come to life on the big screen. Rowling's imaginative universe continues to inspire readers of all ages, reminding us of the power of imagination and the magic of storytelling."
   }
 ]
