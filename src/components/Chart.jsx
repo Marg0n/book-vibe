@@ -17,7 +17,7 @@ const Chart = () => {
         const bookInfo = books.map(book => {
             const data = {
                 name: book.bookName,
-                price: book.totalPages,
+                pages: book.totalPages,
             }
             return data;
         })
@@ -47,7 +47,7 @@ const Chart = () => {
     };
 
     return (
-        <div style={{ width: '100%', height: 300  }}>
+        <div style={{ width: '100%', height: 300 }}>
             <ResponsiveContainer>
                 <BarChart
                     data={data}
@@ -63,7 +63,7 @@ const Chart = () => {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="price" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                    <Bar dataKey="pages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
                         {data.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                         ))}
