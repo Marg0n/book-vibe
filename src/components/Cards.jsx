@@ -9,8 +9,8 @@ const Cards = ({ books }) => {
   // const { bookId } = books;
 
   return (
-    <Link 
-    to={'/'}
+    <div 
+    
     className="grid md:grid-cols-3 gap-8"
     >
       {
@@ -19,7 +19,7 @@ const Cards = ({ books }) => {
         ))
       }
 
-    </Link>
+    </div>
   );
 };
 
