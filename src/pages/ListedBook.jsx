@@ -25,10 +25,10 @@ const ListedBook = () => {
                         Sort by
                         {arrow === false ? <FaAngleDown size={16} /> : <IoIosArrowUp size={18} />}
                     </summary>
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li>Rating</li>
-                        <li>Number of pages</li>
-                        <li>Published year</li>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 border cursor-pointer">
+                        <li value="rating" className=" hover:bg-base-300">Rating</li>
+                        <li value="pages" className="hover:bg-base-300">Number of pages</li>
+                        <li value="year" className="hover:bg-base-300">Published year</li>
                     </ul>
                 </details>
             </div>

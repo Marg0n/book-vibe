@@ -34,6 +34,9 @@ const Nav = () => {
             <Link to="/pagestoread" className="hover:bg-base-300">
               Pages to Read
             </Link>
+            <Link to="/wishtoread" className="hover:bg-base-300">
+              Wishlist Chart
+            </Link>
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
@@ -66,6 +69,14 @@ const Nav = () => {
             }
           >
             Pages to Read
+          </NavLink>
+          <NavLink
+            to="/wishtoread"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 border p-2 border-green-500 rounded-lg font-bold" : "font-bold"
+            }
+          >
+            Wishlist Chart
           </NavLink>
         </ul>
       </div>
