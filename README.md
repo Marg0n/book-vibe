@@ -4,7 +4,7 @@ Live site:
 
 - [Live Site]()
 
-  Resources:
+Resources:
 
 - [Prop-Types](https://www.npmjs.com/package/prop-types)
 - [Daisy UI](https://daisyui.com/)
