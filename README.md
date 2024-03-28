@@ -17,7 +17,7 @@ Resources:
 - [React-Icons](https://react-icons.github.io/react-icons/)
 
 
-Features and characteristics of the website:
+# Features and characteristics of the website:
   
 1. Responsive Design: The website will adapt seamlessly to various screen sizes (large and small), ensuring a consistent and user-friendly experience across devices, from desktops to mobile phones.
 2. Interactive User Experience: Users can easily navigate through the website with intuitive features such as dynamic routing, clickable book cards, and interactive toast for adding books to their read or wishlist.
