@@ -17,7 +17,7 @@ console.log(interviewsOfAuthor)
                 What does the Authors think about their creation?
                 </h2>
 
-            <div className='grid grid-cols-2 gap-4'>
+            <div className='grid lg:grid-cols-2 gap-4'>
         {
             interviewsOfAuthor?.map((interviews, idx) => (
                 <AuthorInterview key={idx} interviews={interviews}/>
