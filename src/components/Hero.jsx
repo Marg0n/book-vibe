@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import book from "../assets/images/book1.png"
+import book from "/images/book1.png"
 
 const Hero = () => {
   return (
