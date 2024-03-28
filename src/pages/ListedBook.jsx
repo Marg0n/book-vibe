@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa";
 import { IoIosArrowUp } from "react-icons/io";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+import ShowStoredBooks from "../components/ShowStoredBooks";
+import ShowWishlistBooks from "../components/ShowWishlistBooks";
 
 
 
@@ -9,7 +11,19 @@ import { Link, Outlet } from "react-router-dom";
 const ListedBook = () => {
 
     const [tabIndex, setTabIndex] = useState(0);
+    // button state change
     const [arrow, setArrow] = useState(false);
+    //sorting
+    const [sortBy, setSortBy] = useState('');
+
+    const handleSort = (option) => {
+        // setSortBy(option.target.value);
+        // console.log('clicked', option.target.value);
+        setSortBy(option);
+        console.log('clicked', option);
+    };
+
+    // console.log('clicked outside', sortBy);
 
     return (
         <div className="container mx-auto">
@@ -18,17 +32,27 @@ const ListedBook = () => {
             </div>
 
             <div className="flex justify-center items-center py-8 ">
+                {/* <select
+                    onChange={handleSort}             
+                    className="m-1 bg-green-500 text-white p-2 shadow rounded-box border-none cursor-pointer">
+                    <option value="" className=" hover:bg-base-300">Default</option>
+                    <option value="rating" className=" hover:bg-base-300">Rating</option>
+                    <option value="pages" className="hover:bg-base-300">Number of pages</option>
+                    <option value="year" className="hover:bg-base-300">Published year</option>
+                </select> */}
                 <details className="dropdown ">
                     <summary
                         onClick={() => setArrow(!arrow)}
                         className="m-1 btn bg-green-500 text-white hover:btn-accent">
-                        Sort by
+                        Sort by : {sortBy == '' ? 'Default' : sortBy}
                         {arrow === false ? <FaAngleDown size={16} /> : <IoIosArrowUp size={18} />}
                     </summary>
+
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 border cursor-pointer">
-                        <li value="rating" className=" hover:bg-base-300">Rating</li>
-                        <li value="pages" className="hover:bg-base-300">Number of pages</li>
-                        <li value="year" className="hover:bg-base-300">Published year</li>
+                        <li onClick={() => handleSort('')} className=" hover:bg-base-300">Default</li>
+                        <li onClick={() => handleSort('rating')} className=" hover:bg-base-300">Rating</li>
+                        <li onClick={() => handleSort('pages')} className="hover:bg-base-300">Number of pages</li>
+                        <li onClick={() => handleSort('year')} className="hover:bg-base-300">Published year</li>
                     </ul>
                 </details>
             </div>
@@ -47,6 +71,7 @@ const ListedBook = () => {
                     </svg>
                     <span>Read Books</span>
                 </Link>
+
                 <Link
                     to='wishlist'
                     onClick={() => setTabIndex(1)}
@@ -66,7 +91,17 @@ const ListedBook = () => {
             </div>
             {/* tabs end*/}
             <div className="mt-6">
-                <Outlet />
+                {/* <Outlet sortBy={sortBy} /> */}
+                {/* <Outlet  context={[sortBy]} /> */}
+                <div className={`${tabIndex === 0 ? "visible " : "hidden"} `}>
+                    <ShowStoredBooks sortBy={sortBy} />
+                </div>
+                <div
+                    className={`${tabIndex === 1 ? "visible " : "hidden"} `}>
+                    <ShowWishlistBooks sortBy={sortBy} />
+                </div>
+
+
             </div>
 
         </div>
