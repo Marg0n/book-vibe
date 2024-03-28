@@ -4,10 +4,11 @@ import { getReadBooks } from '../utils/storage';
 // import StorageCard from './StorageCard';
 import { PropTypes } from 'prop-types';
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 import Tag from './Tag';
 
 
-const ShowStoredBooks = ({sortBy}) => {
+const ShowStoredBooks = ({ sortBy }) => {
 
     const [bookDetails, setBookDetails] = useState([]);
     // const book = useLoaderData();
@@ -35,7 +36,7 @@ const ShowStoredBooks = ({sortBy}) => {
     return (
         <div
             // to={`/book/${bookId}`}
-            className="grid md:grid-cols-1 gap-8"
+            className="grid grid-cols-1 gap-10"
         >
             {/* {
                 bookDetails.map((book, idx) => (
@@ -43,13 +44,14 @@ const ShowStoredBooks = ({sortBy}) => {
                 ))
             } */}
 
-<div>
+            <div >
                 {sortedBooks.map((book, idx) => (
-                    
-                    
-                    <div
+
+
+                    <Link
+                        to={`/book/${book.bookId}`}
                         key={idx}
-                        className="card card-side shadow-xl border-2 p-4 flex flex-col md:flex-row">
+                        className="card card-side shadow-xl border-2 p-4 flex flex-col md:flex-row my-6">
                         <figure className='lg:w-1/4 bg-base-300 py-6 rounded-lg'>
                             <img
                                 src={book.image}
@@ -74,17 +76,17 @@ const ShowStoredBooks = ({sortBy}) => {
                                     Year of Publishing : {book.yearOfPublishing}
                                 </p>
                             </div>
-        
+
                             <div className="divider"></div>
-        
+
                             <div className=" flex flex-col md:flex-row w-max gap-4 justify-center items-center ">
                                 <p className='bg-blue-100 rounded-2xl py-1 px-2 mr-6 text-blue-600 w-max '>Category : {book.category}</p>
                                 <p className='bg-amber-200 rounded-2xl py-1 px-2 mr-6 text-amber-600 w-max'>Rating : {book.rating}</p>
                                 <button className="btn bg-green-500 justify-start hover:btn-accent">View Details</button>
                             </div>
                         </div>
-                    </div>
-                
+                    </Link>
+
                 ))}
             </div>
 
